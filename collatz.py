@@ -1,16 +1,15 @@
-grid = [['.', '.', '.', '.', '.', '.'],
-        ['.', 'O', 'O', '.', '.', '.'],
-        ['O', 'O', 'O', 'O', '.', '.'],
-        ['O', 'O', 'O', 'O', 'O', '.'],
-        ['.', 'O', 'O', 'O', 'O', 'O'],
-        ['O', 'O', 'O', 'O', 'O', '.'],
-        ['O', 'O', 'O', 'O', '.', '.'],
-        ['.', 'O', 'O', '.', '.', '.'],
-        ['.', '.', '.', '.', '.', '.']]
+#Type in a number,and this program will call the Collatz function until the number is 1
+def collatz(number):
+    while number!=1:
+        if number%2==0:
+            number=number//2
+            print(number)
 
-for x in range(0,6):
-    for y in range(0,9):
-        print(grid[y][x],end='')
-    print()
-        
+        else:
+            number=3*number+1
+            print(number)
+
+
+num=int(input('Insert number: '))
+collatz(num)
         
